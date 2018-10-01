@@ -1,0 +1,31 @@
+.sign-in {
+  display: grid;
+  grid-template-columns: 1fr 450px 1fr;
+  grid-template-rows: 50px auto 20px auto 20px auto 20px auto;
+  grid-template-areas:
+    '. .        .'
+    '. logo     .'
+    '. .        .'
+    '. login    .'
+    '. .        .'
+    '. password .'
+    '. .        .'
+    '. submit   .';
+  text-align: center;
+}
+
+.sign-in__logo {
+  grid-area: logo;
+}
+
+.sign-in__login {
+  grid-area: login;
+}
+
+.sign-in__password {
+  grid-area: password;
+}
+
+.sign-in__submit {
+  grid-area: submit;
+}

@@ -1,12 +1,12 @@
 {
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "prettier", "plugin:jest/recommended"],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [".storybook/**", "stories/**"]
+        "devDependencies": [".storybook/**", "stories/**", "src/setupTests.js", "**/*.test.js"]
       }
     ]
   },
