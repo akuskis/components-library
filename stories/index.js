@@ -10,4 +10,4 @@ storiesOf('Button', module).add('with text', () => (
   </button>
 ));
 
-storiesOf('SignIn', module).add('example', () => <SignIn img="pics/sign-in.png" />);
+storiesOf('SignIn', module).add('example', () => <SignIn img="pics/sign-in.png" onSignIn={action('onSignIn')} />);

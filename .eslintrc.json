@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "prettier", "plugin:jest/recommended"],
+  "extends": ["airbnb", "prettier", "plugin:flowtype/recommended", "plugin:jest/recommended"],
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
@@ -11,12 +11,15 @@
     ]
   },
   "parser": "babel-eslint",
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "flowtype", "jest"],
   "settings": {
     "import/resolver": {
       "node": {
         "moduleDirectory": ["node_modules", "src"]
       }
+    },
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
     }
   }
 }
