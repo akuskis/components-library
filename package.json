@@ -12,13 +12,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=none",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9000 -c .storybook -s ./public"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged && eslint ."
     }
   },
   "jest": {
