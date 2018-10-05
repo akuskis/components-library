@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignIn /> render with all props 1`] = `
+<div
+  className="sign-in"
+>
+  <div
+    className="sign-in__logo"
+  >
+    <img
+      alt="sign in"
+      src="some.pic"
+    />
+  </div>
+  <WithStyles(Input)
+    className="sign-in__login"
+    name="login"
+    onChange={[Function]}
+    placeholder="login"
+    value=""
+  />
+  <WithStyles(Input)
+    className="sign-in__password"
+    name="password"
+    onChange={[Function]}
+    placeholder="password"
+    type="password"
+    value=""
+  />
+  <WithStyles(Button)
+    className="sign-in__submit"
+    name="submit"
+    onClick={[Function]}
+  >
+    ENTER
+  </WithStyles(Button)>
+</div>
+`;
+
+exports[`<SignIn /> render without props 1`] = `
+<div
+  className="sign-in"
+>
+  <div
+    className="sign-in__logo"
+  />
+  <WithStyles(Input)
+    className="sign-in__login"
+    name="login"
+    onChange={[Function]}
+    placeholder="login"
+    value=""
+  />
+  <WithStyles(Input)
+    className="sign-in__password"
+    name="password"
+    onChange={[Function]}
+    placeholder="password"
+    type="password"
+    value=""
+  />
+  <WithStyles(Button)
+    className="sign-in__submit"
+    name="submit"
+    onClick={[Function]}
+  >
+    ENTER
+  </WithStyles(Button)>
+</div>
+`;
+
+exports[`<SignIn /> should render with all props 1`] = `
+<div
+  className="sign-in"
+>
+  <div
+    className="sign-in__logo"
+  >
+    <img
+      alt="sign in"
+      src="some.pic"
+    />
+  </div>
+  <WithStyles(Input)
+    className="sign-in__login"
+    name="login"
+    onChange={[Function]}
+    placeholder="login"
+    value=""
+  />
+  <WithStyles(Input)
+    className="sign-in__password"
+    name="password"
+    onChange={[Function]}
+    placeholder="password"
+    type="password"
+    value=""
+  />
+  <WithStyles(Button)
+    className="sign-in__submit"
+    name="submit"
+    onClick={[Function]}
+  >
+    ENTER
+  </WithStyles(Button)>
+</div>
+`;
+
+exports[`<SignIn /> should render without props 1`] = `
+<div
+  className="sign-in"
+>
+  <div
+    className="sign-in__logo"
+  />
+  <WithStyles(Input)
+    className="sign-in__login"
+    name="login"
+    onChange={[Function]}
+    placeholder="login"
+    value=""
+  />
+  <WithStyles(Input)
+    className="sign-in__password"
+    name="password"
+    onChange={[Function]}
+    placeholder="password"
+    type="password"
+    value=""
+  />
+  <WithStyles(Button)
+    className="sign-in__submit"
+    name="submit"
+    onClick={[Function]}
+  >
+    ENTER
+  </WithStyles(Button)>
+</div>
+`;

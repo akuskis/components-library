@@ -1,24 +1,64 @@
 // @flow
 
 import { Button, Input } from '@material-ui/core';
-import React from 'react';
+import React, { Component } from 'react';
 
 import './signIn.css';
 
 type Props = {
-  img: string,
+  logo?: string,
   onSignIn: Function
 };
 
-const SignIn = ({ img, onSignIn }: Props) => (
-  <div className="sign-in">
-    <img className="sign-in__logo" src={img} alt="sign in" />
-    <Input className="sign-in__login" placeholder="login" />
-    <Input className="sign-in__password" placeholder="password" type="password" />
-    <Button className="sign-in__submit" onClick={() => onSignIn('login', 'password')}>
-      ENTER
-    </Button>
-  </div>
-);
+type State = {
+  login: string,
+  password: string
+};
+
+class SignIn extends Component<Props, State> {
+  static defaultProps = { logo: undefined };
+
+  state = { login: '', password: '' };
+
+  handleChange = (event: { target: { name: string, value: string } }) => {
+    const {
+      target: { name, value }
+    } = event;
+
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleSignIn = () => {
+    const { login, password } = this.state;
+    const { onSignIn } = this.props;
+
+    onSignIn(login, password);
+  };
+
+  render() {
+    const { logo } = this.props;
+    const { login, password } = this.state;
+
+    return (
+      <div className="sign-in">
+        <div className="sign-in__logo">{logo ? <img src={logo} alt="sign in" /> : null}</div>
+        <Input name="login" className="sign-in__login" placeholder="login" onChange={this.handleChange} value={login} />
+        <Input
+          name="password"
+          className="sign-in__password"
+          placeholder="password"
+          type="password"
+          onChange={this.handleChange}
+          value={password}
+        />
+        <Button name="submit" className="sign-in__submit" onClick={this.handleSignIn}>
+          ENTER
+        </Button>
+      </div>
+    );
+  }
+}
 
 export default SignIn;
