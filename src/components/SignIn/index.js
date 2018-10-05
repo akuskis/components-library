@@ -26,9 +26,7 @@ class SignIn extends Component<Props, State> {
       target: { name, value }
     } = event;
 
-    this.setState({
-      [name]: value
-    });
+    this.setState({ [name]: value });
   };
 
   handleSignIn = () => {

@@ -22,22 +22,15 @@ describe('<SignIn />', () => {
       password: 'Wilson'
     };
 
+    const login = 'login';
+    const password = 'password';
+
     const doSignIn = jest.fn();
     const component = shallow(<SignIn onSignIn={doSignIn} />);
 
-    component.find({ name: 'login' }).simulate('change', {
-      target: {
-        name: 'login',
-        value: credentials.login
-      }
-    });
-    component
-      .find({ name: 'password' })
-      .simulate('change', { target: { name: 'password', value: credentials.password } });
-    component
-      .find('SignInButton')
-      .at(0)
-      .simulate('click');
+    component.find({ name: login }).simulate('change', { target: { name: login, value: credentials.login } });
+    component.find({ name: password }).simulate('change', { target: { name: password, value: credentials.password } });
+    component.find('SignInButton').simulate('click');
 
     expect(doSignIn).toHaveBeenCalledTimes(1);
     expect(doSignIn).toHaveBeenCalledWith(credentials.login, credentials.password);
