@@ -11,7 +11,7 @@ describe('<SignIn />', () => {
   });
 
   it('should render with all props', () => {
-    const shallowed = shallow(<SignIn logo="some.pic" onSignIn={jest.fn()} />);
+    const shallowed = shallow(<SignIn logoPath="some.pic" onSignIn={jest.fn()} />);
 
     expect(shallowed).toMatchSnapshot();
   });

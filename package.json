@@ -13,6 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=none",
+    "eslint": "eslint .",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9000 -c .storybook -s ./public"
   },

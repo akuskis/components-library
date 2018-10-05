@@ -7,7 +7,7 @@ import SignInButton from './SignInButton';
 import './signIn.css';
 
 type Props = {
-  logo?: string,
+  logoPath?: string,
   onSignIn: Function
 };
 
@@ -17,7 +17,7 @@ type State = {
 };
 
 class SignIn extends Component<Props, State> {
-  static defaultProps = { logo: undefined };
+  static defaultProps = { logoPath: undefined };
 
   state = { login: '', password: '' };
 
@@ -37,12 +37,12 @@ class SignIn extends Component<Props, State> {
   };
 
   render() {
-    const { logo } = this.props;
+    const { logoPath } = this.props;
     const { login, password } = this.state;
 
     return (
       <div className="sign-in">
-        {logo ? <img className="sign-in__logo" src={logo} alt="sign in" /> : null}
+        {logoPath ? <img className="sign-in__logo" src={logoPath} alt="sign in" /> : null}
         <Input name="login" className="sign-in__input" placeholder="login" onChange={this.handleChange} value={login} />
         <Input
           name="password"
