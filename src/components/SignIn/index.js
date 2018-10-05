@@ -1,8 +1,9 @@
 // @flow
 
-import { Button, Input } from '@material-ui/core';
+import { Input } from '@material-ui/core';
 import React, { Component } from 'react';
 
+import SignInButton from './SignInButton';
 import './signIn.css';
 
 type Props = {
@@ -43,19 +44,19 @@ class SignIn extends Component<Props, State> {
 
     return (
       <div className="sign-in">
-        <div className="sign-in__logo">{logo ? <img src={logo} alt="sign in" /> : null}</div>
-        <Input name="login" className="sign-in__login" placeholder="login" onChange={this.handleChange} value={login} />
+        {logo ? <img className="sign-in__logo" src={logo} alt="sign in" /> : null}
+        <Input name="login" className="sign-in__input" placeholder="login" onChange={this.handleChange} value={login} />
         <Input
           name="password"
-          className="sign-in__password"
+          className="sign-in__input"
           placeholder="password"
           type="password"
           onChange={this.handleChange}
           value={password}
         />
-        <Button name="submit" className="sign-in__submit" onClick={this.handleSignIn}>
-          ENTER
-        </Button>
+        <div className="sign-in__button">
+          <SignInButton onClick={this.handleSignIn} />
+        </div>
       </div>
     );
   }

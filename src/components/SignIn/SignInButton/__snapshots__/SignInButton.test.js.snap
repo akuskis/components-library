@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignInButton /> should render with props 1`] = `
+<WithStyles(Button)
+  className="sign-in-button"
+  name="submit"
+  onClick={[Function]}
+>
+  ENTER
+</WithStyles(Button)>
+`;
+
+exports[`<SignInButton /> should render without props 1`] = `
+<WithStyles(Button)
+  className="sign-in-button"
+  name="submit"
+>
+  ENTER
+</WithStyles(Button)>
+`;

@@ -10,4 +10,5 @@ storiesOf('Button', module).add('with text', () => (
   </button>
 ));
 
-storiesOf('SignIn', module).add('example', () => <SignIn logo="pics/sign-in.png" onSignIn={action('onSignIn')} />);
+storiesOf('SignIn', module).add('without logo', () => <SignIn onSignIn={action('onSignIn')} />);
+storiesOf('SignIn', module).add('with logo', () => <SignIn logo="pics/sign-in.png" onSignIn={action('onSignIn')} />);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import SignIn from '.';
 
@@ -34,7 +34,10 @@ describe('<SignIn />', () => {
     component
       .find({ name: 'password' })
       .simulate('change', { target: { name: 'password', value: credentials.password } });
-    component.find({ name: 'submit' }).simulate('click');
+    component
+      .find('SignInButton')
+      .at(0)
+      .simulate('click');
 
     expect(doSignIn).toHaveBeenCalledTimes(1);
     expect(doSignIn).toHaveBeenCalledWith(credentials.login, credentials.password);
