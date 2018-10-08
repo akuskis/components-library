@@ -1,7 +1,7 @@
 // @flow
 
-import { Input, Button } from '@material-ui/core';
 import React, { Component } from 'react';
+import { Input, Button } from '@material-ui/core';
 
 import './signIn.css';
 
@@ -46,7 +46,7 @@ class SignIn extends Component<Props, State> {
           placeholder="login"
           onChange={this.handleChange}
           value={login}
-          style={{ width: '400px' }}
+          style={{ width: '100%' }}
         />
         <Input
           name="password"
@@ -54,7 +54,7 @@ class SignIn extends Component<Props, State> {
           type="password"
           onChange={this.handleChange}
           value={password}
-          style={{ width: '400px' }}
+          style={{ width: '100%' }}
         />
         <Button name="submit" style={{ width: '175px' }} onClick={this.handleSignIn}>
           ENTER
