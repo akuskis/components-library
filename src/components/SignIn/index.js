@@ -46,7 +46,7 @@ class SignIn extends Component<Props, State> {
           placeholder="login"
           onChange={this.handleChange}
           value={login}
-          style={{ width: '100%' }}
+          style={{ width: '400px' }}
         />
         <Input
           name="password"
@@ -54,9 +54,9 @@ class SignIn extends Component<Props, State> {
           type="password"
           onChange={this.handleChange}
           value={password}
-          style={{ width: '100%' }}
+          style={{ width: '400px' }}
         />
-        <Button name="submit" style={{ width: '50%' }} onClick={this.handleSignIn}>
+        <Button name="submit" style={{ width: '175px' }} onClick={this.handleSignIn}>
           ENTER
         </Button>
       </div>
