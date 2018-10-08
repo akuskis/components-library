@@ -33,7 +33,7 @@ class SignIn extends Component<Props, State> {
   handleSignIn = () => {
     const { onSignIn } = this.props;
 
-    onSignIn(this.state);
+    onSignIn({ ...this.state });
   };
 
   render() {

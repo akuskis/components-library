@@ -32,7 +32,7 @@ exports[`<SignIn /> should render with all props 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "width": "50%",
+        "width": "175px",
       }
     }
   >
@@ -73,7 +73,7 @@ exports[`<SignIn /> should render without props 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "width": "50%",
+        "width": "175px",
       }
     }
   >
