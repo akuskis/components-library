@@ -4,33 +4,40 @@ exports[`<SignIn /> should render with all props 1`] = `
 <div
   className="sign-in"
 >
-  <img
-    alt="sign in"
-    className="sign-in__logo"
-    src="some.pic"
-  />
   <WithStyles(Input)
-    className="sign-in__input"
     name="login"
     onChange={[Function]}
     placeholder="login"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
     value=""
   />
   <WithStyles(Input)
-    className="sign-in__input"
     name="password"
     onChange={[Function]}
     placeholder="password"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
     type="password"
     value=""
   />
-  <div
-    className="sign-in__button"
+  <WithStyles(Button)
+    name="submit"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
   >
-    <SignInButton
-      onClick={[Function]}
-    />
-  </div>
+    ENTER
+  </WithStyles(Button)>
 </div>
 `;
 
@@ -39,26 +46,38 @@ exports[`<SignIn /> should render without props 1`] = `
   className="sign-in"
 >
   <WithStyles(Input)
-    className="sign-in__input"
     name="login"
     onChange={[Function]}
     placeholder="login"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
     value=""
   />
   <WithStyles(Input)
-    className="sign-in__input"
     name="password"
     onChange={[Function]}
     placeholder="password"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
     type="password"
     value=""
   />
-  <div
-    className="sign-in__button"
+  <WithStyles(Button)
+    name="submit"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "50%",
+      }
+    }
   >
-    <SignInButton
-      onClick={[Function]}
-    />
-  </div>
+    ENTER
+  </WithStyles(Button)>
 </div>
 `;

@@ -8,11 +8,10 @@
     "react-dom": "^16.5.2",
     "react-scripts": "1.1.5"
   },
-  "flow.pathToFlow": "./node_modules/.bin/flow",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=none",
+    "test": "react-scripts test --env=jsdom",
     "eslint": "eslint .",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9000 -c .storybook -s ./public"
@@ -51,6 +50,7 @@
     "jest": "^23.6.0",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.7.0",
-    "react-test-renderer": "^16.5.2"
+    "react-test-renderer": "^16.5.2",
+    "storybook-addon-material-ui": "^0.9.0-alpha.16"
   }
 }
