@@ -1,0 +1,13 @@
+.SignInStory {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.SignInStory__form {
+  width: 400px;
+  margin-top: 20px;
+}

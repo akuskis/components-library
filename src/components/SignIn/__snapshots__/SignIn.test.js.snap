@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignIn /> should render with all props 1`] = `
+<div
+  className="sign-in"
+>
+  <WithStyles(Input)
+    name="login"
+    onChange={[Function]}
+    placeholder="login"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+    value=""
+  />
+  <WithStyles(Input)
+    name="password"
+    onChange={[Function]}
+    placeholder="password"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+    type="password"
+    value=""
+  />
+  <WithStyles(Button)
+    name="submit"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "175px",
+      }
+    }
+  >
+    ENTER
+  </WithStyles(Button)>
+</div>
+`;
+
+exports[`<SignIn /> should render without props 1`] = `
+<div
+  className="sign-in"
+>
+  <WithStyles(Input)
+    name="login"
+    onChange={[Function]}
+    placeholder="login"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+    value=""
+  />
+  <WithStyles(Input)
+    name="password"
+    onChange={[Function]}
+    placeholder="password"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+    type="password"
+    value=""
+  />
+  <WithStyles(Button)
+    name="submit"
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "175px",
+      }
+    }
+  >
+    ENTER
+  </WithStyles(Button)>
+</div>
+`;
