@@ -34,9 +34,8 @@ describe('<SignIn />', () => {
       .find({ name: 'password' })
       .simulate('change', { target: { name: 'password', value: credentials.password } });
     component
-      .find('Button')
+      .find('button')
       .find({ name: 'submit' })
-      .first()
       .simulate('submit');
 
     expect(doSignIn).toHaveBeenCalledTimes(1);
