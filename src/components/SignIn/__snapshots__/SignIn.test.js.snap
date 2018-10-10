@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SignIn /> should render with all props 1`] = `
-<div
+<form
   className="sign-in"
+  onSubmit={[Function]}
 >
   <WithStyles(Input)
     name="login"
@@ -29,21 +30,22 @@ exports[`<SignIn /> should render with all props 1`] = `
   />
   <WithStyles(Button)
     name="submit"
-    onClick={[Function]}
     style={
       Object {
         "width": "175px",
       }
     }
+    type="submit"
   >
     ENTER
   </WithStyles(Button)>
-</div>
+</form>
 `;
 
 exports[`<SignIn /> should render without props 1`] = `
-<div
+<form
   className="sign-in"
+  onSubmit={[Function]}
 >
   <WithStyles(Input)
     name="login"
@@ -70,14 +72,14 @@ exports[`<SignIn /> should render without props 1`] = `
   />
   <WithStyles(Button)
     name="submit"
-    onClick={[Function]}
     style={
       Object {
         "width": "175px",
       }
     }
+    type="submit"
   >
     ENTER
   </WithStyles(Button)>
-</div>
+</form>
 `;

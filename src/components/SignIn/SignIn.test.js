@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import SignIn from '.';
 
@@ -23,15 +23,21 @@ describe('<SignIn />', () => {
     };
 
     const doSignIn = jest.fn();
-    const component = shallow(<SignIn onSignIn={doSignIn} />);
+    const component = mount(<SignIn onSignIn={doSignIn} />);
 
     component
+      .find('input')
       .find({ name: 'login' })
       .simulate('change', { target: { name: 'login', value: credentials.login } });
     component
+      .find('input')
       .find({ name: 'password' })
       .simulate('change', { target: { name: 'password', value: credentials.password } });
-    component.find({ name: 'submit' }).simulate('click');
+    component
+      .find('Button')
+      .find({ name: 'submit' })
+      .first()
+      .simulate('submit');
 
     expect(doSignIn).toHaveBeenCalledTimes(1);
     expect(doSignIn).toHaveBeenCalledWith({
