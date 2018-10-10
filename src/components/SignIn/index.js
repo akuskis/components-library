@@ -30,17 +30,19 @@ class SignIn extends Component<Props, State> {
     this.setState({ [name]: value });
   };
 
-  handleSignIn = () => {
+  handleSignIn = (event: SyntheticEvent<HTMLFormElement>) => {
     const { onSignIn } = this.props;
 
     onSignIn({ ...this.state });
+
+    event.preventDefault();
   };
 
   render() {
     const { login, password } = this.state;
 
     return (
-      <div className="sign-in">
+      <form className="sign-in" onSubmit={this.handleSignIn}>
         <Input
           name="login"
           placeholder="login"
@@ -56,10 +58,10 @@ class SignIn extends Component<Props, State> {
           value={password}
           style={{ width: '100%' }}
         />
-        <Button name="submit" style={{ width: '175px' }} onClick={this.handleSignIn}>
+        <Button name="submit" type="submit" style={{ width: '175px' }}>
           ENTER
         </Button>
-      </div>
+      </form>
     );
   }
 }
