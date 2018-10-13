@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuItem /> should render 1`] = `
+<NavLink
+  activeClassName="menu-item_active"
+  aria-current="page"
+  className="menu-item"
+  to="/route"
+>
+  <span>
+    Title
+  </span>
+</NavLink>
+`;
+
+exports[`<MenuItem /> should render props 1`] = `
+<NavLink
+  activeClassName="menu-item_active"
+  aria-current="page"
+  className="menu-item"
+  to="/route"
+>
+  <span>
+    Title
+  </span>
+</NavLink>
+`;
