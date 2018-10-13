@@ -13,7 +13,8 @@ type Props = {
 };
 
 const SidebarMenu = ({ items }: Props) => {
-  const content = items && items.map(item => <MenuItem {...item} />);
+  const content =
+    items && items.map(item => <MenuItem key={item.title + item.routePath} {...item} />);
 
   return <div className="sidebar-menu">{content}</div>;
 };

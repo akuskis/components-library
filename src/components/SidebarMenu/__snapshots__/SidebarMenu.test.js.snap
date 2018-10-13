@@ -5,14 +5,17 @@ exports[`<SidebarMenu /> should render with content 1`] = `
   className="sidebar-menu"
 >
   <MenuItem
+    key="Item A/a"
     routePath="/a"
     title="Item A"
   />
   <MenuItem
+    key="Item B/b"
     routePath="/b"
     title="Item B"
   />
   <MenuItem
+    key="Item C/c"
     routePath="/c"
     title="Item C"
   />
