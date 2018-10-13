@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SidebarMenu /> should render with content 1`] = `
+<div
+  className="sidebar-menu"
+>
+  <MenuItem
+    key="Item A/a"
+    routePath="/a"
+    title="Item A"
+  />
+  <MenuItem
+    key="Item B/b"
+    routePath="/b"
+    title="Item B"
+  />
+  <MenuItem
+    key="Item C/c"
+    routePath="/c"
+    title="Item C"
+  />
+</div>
+`;
+
+exports[`<SidebarMenu /> should render without props 1`] = `
+<div
+  className="sidebar-menu"
+/>
+`;

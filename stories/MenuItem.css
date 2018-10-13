@@ -1,4 +1,4 @@
-.SignInStory {
+.sign-in-story {
   width: 100%;
 
   display: flex;
@@ -7,7 +7,7 @@
   justify-content: space-between;
 }
 
-.SignInStory__form {
+.sign-in-story__form {
   width: 400px;
   margin-top: 20px;
 }

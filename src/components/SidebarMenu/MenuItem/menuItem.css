@@ -1,0 +1,19 @@
+.menu-item {
+  text-decoration: none;
+  color: grey;
+  margin: 10px 0 20px;
+  text-align: left;
+  padding-right: 10px;
+  line-height: 0.1em;
+}
+
+.menu-item_active {
+  color: black;
+  border-bottom: 1px solid #000;
+}
+
+.menu-item_active span {
+  padding-right: 10px;
+
+  background: #fff;
+}
