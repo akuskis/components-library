@@ -3,7 +3,7 @@
   color: grey;
   margin: 10px 0 20px;
   text-align: left;
-  padding: 0 10px 0 0;
+  padding-right: 10px;
   line-height: 0.1em;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .menu-item_active span {
-  padding: 0 10px 0 0;
+  padding-right: 10px;
 
   background: #fff;
 }
