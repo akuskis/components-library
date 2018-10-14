@@ -12,7 +12,7 @@ type Props = {
 
 const MenuItem = ({ title, routePath }: Props) => (
   <NavLink to={routePath} className="menu-item" activeClassName="menu-item_active">
-    <div className="menu-item__title">{title}</div>
+    <div>{title}</div>
     <div className="menu-item__trailing">
       <div className="menu-item__trailing__line" />
     </div>
