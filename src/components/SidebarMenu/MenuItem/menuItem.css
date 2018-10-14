@@ -1,5 +1,6 @@
 .menu-item {
   display: inline-flex;
+  align-items: center;
 
   text-decoration: none;
   color: grey;
@@ -10,15 +11,10 @@
   color: black;
 }
 
-.menu-item_active .menu-item__trailing {
+.menu-item_active .menu-item__trailing-line {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10px;
-}
+  margin-left: 10px;
 
-.menu-item_active .menu-item__trailing__line {
   height: 1px;
   background: black;
 }
