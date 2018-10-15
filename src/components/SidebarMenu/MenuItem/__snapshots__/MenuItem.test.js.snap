@@ -7,8 +7,11 @@ exports[`<MenuItem /> should render 1`] = `
   className="menu-item"
   to="/route"
 >
-  <span>
+  <div>
     Title
-  </span>
+  </div>
+  <div
+    className="menu-item__trailing-line"
+  />
 </NavLink>
 `;

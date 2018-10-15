@@ -19,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && eslint ."
+      "pre-commit": "pretty-quick --staged && eslint . && CI=true npm test"
     }
   },
   "jest": {
