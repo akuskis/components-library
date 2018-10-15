@@ -42,19 +42,12 @@ class SignIn extends Component<Props, State> {
     const { login, password } = this.state;
 
     return (
-      <form className="sign-in" onSubmit={this.handleSignIn}>
-        <Input
-          name="login"
-          placeholder="login"
-          onChange={this.handleChange}
-          value={login}
-          style={{ width: '100%' }}
-        />
+      <form className="sign-in" onSubmit={this.handleSignIn} onChange={this.handleChange}>
+        <Input name="login" placeholder="login" value={login} style={{ width: '100%' }} />
         <Input
           name="password"
           placeholder="password"
           type="password"
-          onChange={this.handleChange}
           value={password}
           style={{ width: '100%' }}
         />
