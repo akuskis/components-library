@@ -2,7 +2,7 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
-import './MenuItem.css';
+import './SignIn.css';
 import SignIn from '../src/components/SignIn';
 
 storiesOf('SignIn', module)
