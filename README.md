@@ -4,9 +4,18 @@
 
 Components for pet project.
 
+## Installation
+
+`components-library` is available as an [npm package](https://www.npmjs.com/package/@akuskis/components-library).
+
+```
+// with npm
+npm install @akuskis/components-library
+```
+
 ## Components demonstration
 
-Install dependencies (if they are not installed, yet):
+Checkout repository, then install dependencies:
 
 `npm install`
 

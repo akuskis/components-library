@@ -1,17 +1,26 @@
 {
-  "name": "components-library",
+  "name": "@akuskis/components-library",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^3.1.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5"
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akuskis/components-library"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@material-ui/core": "3.x",
+    "react": "16.x",
+    "react-dom": "16.x",
+    "react-router-dom": "4.x"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf dist && NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore test.js,__snapshots__",
     "test": "react-scripts test --env=jsdom",
     "eslint": "eslint .",
     "eject": "react-scripts eject",
@@ -28,8 +37,10 @@
     ]
   },
   "devDependencies": {
+    "@material-ui/core": "^3.1.2",
     "@storybook/addon-actions": "^3.4.11",
     "@storybook/react": "^3.4.11",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -51,6 +62,10 @@
     "jest": "^23.6.0",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.7.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.5",
     "react-test-renderer": "^16.5.2",
     "storybook-addon-material-ui": "^0.9.0-alpha.16",
     "storybook-react-router": "^1.0.1"
