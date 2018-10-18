@@ -2,10 +2,10 @@
   "name": "@akuskis/components-library",
   "version": "0.1.0",
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "build/index.js",
+  "module": "build/index.js",
   "files": [
-    "dist",
+    "build",
     "README.md"
   ],
   "repository": {
@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore test.js,__snapshots__",
+    "build": "rm -rf dist && NODE_ENV=production babel src/components --out-dir build --copy-files --ignore test.js,__snapshots__",
     "test": "react-scripts test --env=jsdom",
     "eslint": "eslint .",
     "eject": "react-scripts eject",
