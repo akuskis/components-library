@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+SETTINGS_FILE="package.json"
+
+# =============================================================================
+# Functions
+# =============================================================================
+
 usage()
 {
     cat << EOF
@@ -20,27 +26,25 @@ function errcho
 
 function get_package_name
 {
-    sed -rne 's/.*"name":\s"(\S*)".*/\1/p' package.json
+    sed -rne 's/.*"name":\s"(\S*)".*/\1/p' "${SETTINGS_FILE}"
 }
 
 function get_current_version
 {
-    sed -rne 's/.*"version":\s"(\S*)".*/\1/p' package.json
-}
-
-function get_released_versions
-{
-    package_name=`get_package_name`
-
-    npm view "${package_name}" versions
+    sed -rne 's/.*"version":\s"(\S*)".*/\1/p' "${SETTINGS_FILE}"
 }
 
 function was_released
 {
-    current_version=`get_current_version`
-    released_versions=`get_released_versions`
+    PACKAGE_NAME=`get_package_name`
+    CURRENT_VERSION=`get_current_version`
 
-    echo "${released_versions}" | grep "${current_version}" 1> /dev/null
+    FULL_PACKAGE_NAME="${PACKAGE_NAME}@${CURRENT_VERSION}"
+
+    if [ -z "$(npm info ${FULL_PACKAGE_NAME})" ]
+    then
+        return 1
+    fi
 }
 
 # =============================================================================
