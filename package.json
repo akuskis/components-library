@@ -12,13 +12,10 @@
     "type": "git",
     "url": "https://github.com/akuskis/components-library"
   },
-  "license": "MIT",
-  "peerDependencies": {
-    "@material-ui/core": "3.x",
-    "react": "16.x",
-    "react-dom": "16.x",
-    "react-router-dom": "4.x"
+  "publishConfig": {
+    "access": "public"
   },
+  "license": "MIT",
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore test.js,__snapshots__",
     "test": "react-scripts test --env=jsdom",
@@ -35,6 +32,12 @@
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
+  },
+  "peerDependencies": {
+    "@material-ui/core": "3.x",
+    "react": "16.x",
+    "react-dom": "16.x",
+    "react-router-dom": "4.x"
   },
   "devDependencies": {
     "@material-ui/core": "^3.1.2",
