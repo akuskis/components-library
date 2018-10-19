@@ -16,8 +16,20 @@ install:
 
 jobs:
   include:
-    - stage: tests
+    - stage: Verification
+      name: 'Tests'
       script: npm test
-    - stage: checks
-      script: npm eslint
-    - script: ./version.sh --can-deploy
+    - #
+      name: 'ESLint'
+      script: npm run eslint
+    - #
+      name: 'Version number'
+      script: ./version.sh --can-deploy
+
+    - stage: Deploy
+      if: (branch = master AND NOT type = pull_request)
+      deploy:
+        provider: npm
+        skip_cleanup: true
+        email: 'artem.kuskis@gmail.com'
+        api_key: $NPM_API_KEY
