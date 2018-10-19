@@ -33,3 +33,4 @@ jobs:
         skip_cleanup: true
         email: 'artem.kuskis@gmail.com'
         api_key: $NPM_API_KEY
+        script: npm publish
