@@ -14,5 +14,22 @@ cache:
 install:
   - npm install
 
-script:
-  - npm test
+jobs:
+  include:
+    - stage: Verification
+      name: 'Tests'
+      script: npm test
+    - #
+      name: 'ESLint'
+      script: npm run eslint
+    - #
+      name: 'Version number'
+      script: ./version.sh --can-deploy
+
+    - stage: Deploy
+      if: (branch = master AND NOT type = pull_request)
+      deploy:
+        provider: npm
+        skip_cleanup: true
+        email: 'artem.kuskis@gmail.com'
+        api_key: $NPM_API_KEY
