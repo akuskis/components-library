@@ -28,8 +28,4 @@ jobs:
 
     - stage: Deploy
       if: (branch = master AND NOT type = pull_request)
-      deploy:
-        provider: npm
-        skip_cleanup: true
-        email: 'artem.kuskis@gmail.com'
-        api_key: $NPM_API_KEY
+      script: echo "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}" > ~/.npmrc && npm publish
