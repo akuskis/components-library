@@ -3,12 +3,7 @@
   align-items: center;
 
   text-decoration: none;
-  color: grey;
   line-height: 40px;
-}
-
-.menu-item_active {
-  color: black;
 }
 
 .menu-item_active .menu-item__trailing-line {
@@ -16,5 +11,4 @@
   margin-left: 10px;
 
   height: 1px;
-  background: black;
 }

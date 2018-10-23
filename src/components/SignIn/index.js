@@ -43,7 +43,13 @@ class SignIn extends Component<Props, State> {
 
     return (
       <form className="sign-in" onSubmit={this.handleSignIn} onChange={this.handleChange}>
-        <Input name="login" placeholder="login" value={login} style={{ width: '100%' }} />
+        <Input
+          name="login"
+          placeholder="login"
+          value={login}
+          style={{ width: '100%' }}
+          autoComplete="off"
+        />
         <Input
           name="password"
           placeholder="password"

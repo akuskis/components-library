@@ -7,6 +7,7 @@ exports[`<SignIn /> should render with all props 1`] = `
   onSubmit={[Function]}
 >
   <WithStyles(Input)
+    autoComplete="off"
     name="login"
     placeholder="login"
     style={
@@ -48,6 +49,7 @@ exports[`<SignIn /> should render without props 1`] = `
   onSubmit={[Function]}
 >
   <WithStyles(Input)
+    autoComplete="off"
     name="login"
     placeholder="login"
     style={

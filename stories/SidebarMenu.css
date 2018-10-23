@@ -1,0 +1,12 @@
+.sidebar-menu-story {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar-menu-story__content {
+  width: 300px;
+}
+
+.sidebar-menu-story__vertical-line {
+  border-left: 1px solid #adadaf;
+}

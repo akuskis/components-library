@@ -1,10 +1,7 @@
 .sign-in-story {
-  width: 100%;
-
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .sign-in-story__form {
