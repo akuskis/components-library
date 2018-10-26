@@ -29,4 +29,4 @@ jobs:
     - stage: Deploy
       # "deploy npm" doesn't check "return code", that is why it's required to do it manually
       if: (branch = master AND NOT type = pull_request)
-      script: echo "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}" > ~/.npmrc && npm publish
+      script: echo "//registry.npmjs.org/:_authToken=\${NPM_API_KEY}" > ~/.npmrc && npm run build && npm publish
