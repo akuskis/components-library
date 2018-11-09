@@ -1,6 +1,6 @@
 {
   "name": "@akuskis/components-library",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "main": "build/index.js",
   "module": "build/index.js",
@@ -21,7 +21,9 @@
     "test": "react-scripts test --env=jsdom",
     "eslint": "eslint .",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9000 -c .storybook -s ./public"
+    "storybook": "start-storybook -p 9000 -c .storybook -s ./public",
+    "build-storybook": "build-storybook -s ./public",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "husky": {
     "hooks": {
@@ -43,6 +45,7 @@
     "@material-ui/core": "^3.1.2",
     "@storybook/addon-actions": "^3.4.11",
     "@storybook/react": "^3.4.11",
+    "@storybook/storybook-deployer": "^2.3.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
