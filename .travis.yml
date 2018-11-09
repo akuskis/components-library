@@ -26,6 +26,9 @@ jobs:
       name: 'Version number'
       script: ./version.sh --can-deploy
 
+    - stage: Storybook
+      script: npm run deploy-storybook -- --ci
+
     - stage: Deploy
       # "deploy npm" doesn't check "return code", that is why it's required to do it manually
       if: (branch = master AND NOT type = pull_request)
