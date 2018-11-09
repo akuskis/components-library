@@ -27,6 +27,8 @@ jobs:
       script: ./version.sh --can-deploy
 
     - stage: Storybook
+      # required to have GH_TOKEN in environment variables
+      if: (branch = master AND NOT type = pull_request)
       script: npm run deploy-storybook -- --ci
 
     - stage: Deploy
